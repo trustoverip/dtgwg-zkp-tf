@@ -4,7 +4,19 @@ A task force of the [Decentralized Trust Graph Working Group](https://lf-toip.at
 
 ## Mission
 
-Design and deliver a specification for how DTG verifiable trust agents (VTAs) can produce **privacy-preserving zero-knowledge proofs** of DTG credentials — for **proof of personhood** and **biometric liveness** of the principal — without revealing identity, the underlying biometric, or the proprietary means of the determination.
+Design and deliver a specification for how DTG verifiable trust agents (VTAs) can produce **privacy-preserving zero-knowledge proofs** of DTG credentials — for **proof of personhood** and **biometric liveness** of the principal — without revealing the person's identity or the underlying biometric.
+
+### What the cryptography carries — and what it doesn't
+
+The proof establishes **possession of a valid attestation** from an accredited issuer, under a stated policy and assurance class. It does **not** establish that the underlying biometric determination was *correct*.
+
+**The cryptography carries the privacy. The accreditation framework carries the assurance.**
+
+We state this plainly because it determines who is accountable when a determination is wrong. A verifier reading "zero-knowledge proof of liveness" would otherwise assume the cryptography is carrying the assurance. It isn't.
+
+### Normative reference
+
+[*A Cryptographic Framework for Proof of Personhood*](https://eprint.iacr.org/2026/333) — Choudhuri, Garg, Lee, Montgomery, Policharla, Sinha (IACR ePrint 2026/333). Formalises Sybil-resistance, authenticated personhood, and **unlinkability across contexts** — and establishes why full unlinkability alongside Sybil resistance is unreachable. We are specifying a deployment profile of this framework, not reinventing one.
 
 ## Deliverable
 
@@ -40,11 +52,20 @@ We especially want **cryptographers and cryptographic engineers** who can pressu
 
 ## First work item
 
-Our opening decision is **which ZK proof type(s) to use** for each requirement — not a survey of every proof construction, but a specific, conformant choice per predicate. Not all ZK proofs are equal, and liveness/personhood need particular constructions. The requirements draft below frames that decision, and it's the first thing we'll converge on as a group.
+A **Predicate & Assurance-Boundary decision document**, time-boxed to two weeks.
+
+It is a *decision* document, not a description — because what we have written down so far is not yet consistent, and the inconsistency has to be resolved inside it. For each predicate: what it establishes, what it does **not** establish, what it discloses and to whom, and who is accountable for which part of the claim.
+
+The decision that sits underneath all of it:
+
+> **What counts as a context — and must a context boundary survive the issuer and the verifier acting together?**
+
+Every candidate construction is parameterised by that answer. Ask a cryptographer for a nullifier scheme today and the first question back is *"unlinkable against whom?"* Construction selection is sequenced **behind** this, not before it.
 
 ## Where to start
 
-- [`proof-of-liveness-requirements.md`](./proof-of-liveness-requirements.md) — a v0.1 strawman of what a privacy-preserving proof of liveness must prove, in what context, and the inputs/outputs at each boundary, plus candidate proof-type mappings to confirm (Section 4). Starting point for discussion, not a settled position.
+- [`proof-of-liveness-requirements.md`](./proof-of-liveness-requirements.md) — requirements draft (v0.3): what a privacy-preserving proof of liveness must prove, what it must *not* claim, the contexts, the disclosure boundaries, and candidate constructions to confirm. Input to the decision document, not a settled spec.
+- [`DRAFTING-RULES.md`](./DRAFTING-RULES.md) — the four conventions every contribution should follow.
 
 ## Coordination with related work
 
