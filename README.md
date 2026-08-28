@@ -66,11 +66,16 @@ Every candidate construction is parameterised by that answer. Ask a cryptographe
 
 - [`proof-of-liveness-requirements.md`](./proof-of-liveness-requirements.md) — requirements draft (v0.3): what a privacy-preserving proof of liveness must prove, what it must *not* claim, the contexts, the disclosure boundaries, and candidate constructions to confirm. Input to the decision document, not a settled spec.
 - [`DRAFTING-RULES.md`](./DRAFTING-RULES.md) — the four conventions every contribution should follow.
+- [`AGENT-RUNTIMES.md`](./AGENT-RUNTIMES.md) — how members and their AI assistants can back a position with runnable evidence, and where that evidence lives.
 
 ## Coordination with related work
 
 - **Credentials TF** and **Trust Task Protocols TF** — define the credential formats and protocols our proofs apply to (upstream of us).
 - **LFDT / UC Berkeley ZKP work** — the build priority for the October Linux Plumbers / OpenVTC track; we aim to keep our proof definitions in sync with it.
+
+## Evidence and reference runtimes
+
+Positions taken here can be backed by runnable evidence in a separate public repository maintained by the co-chair: [**dtgwg-zkp-mage**](https://github.com/mitchuski/dtgwg-zkp-mage) — reference runtimes per predicate, real circuits with published constraint counts, a conformance-fixture format, a verification registry where independent parties rebuild the circuits on their own hardware, and cards for the proofs requested on the board ([discussion #18](https://github.com/trustoverip/dtgwg-zkp-tf/discussions/18)). It is evidence, not specification — this repository never depends on it, and it is offered under the same IPR terms (CC BY 4.0 docs, Apache 2.0 code). See [`AGENT-RUNTIMES.md`](./AGENT-RUNTIMES.md).
 
 ## Intellectual property
 
