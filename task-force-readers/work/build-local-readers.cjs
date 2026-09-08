@@ -1,0 +1,20 @@
+process.chdir(require('node:path').resolve(__dirname,'..'));
+const fs=require('node:fs');
+const out=require('node:path').resolve(__dirname,'../outputs')+'/';
+const source=require('node:path').resolve(__dirname,'../inputs/discussion-baseline.html');
+const nav='<div class="reader-switch" style="padding:14px 20px;border-bottom:1px solid #aaa;background:#edf2ee;color:#172832;font:15px system-ui"><a style="color:#185d58" href="/">ZKP readers</a> &nbsp; / &nbsp; <a style="color:#185d58" href="/zkp-tf-question-reader.html">Meeting agenda and questions</a> &nbsp; / &nbsp; <a style="color:#185d58" href="/dtg-discussion-reader.html#drafts">Discussion posts and proverbs</a></div>';
+let html=fs.readFileSync(source,'utf8');
+html=require('./publication-overview.cjs')(html);
+html=require('./repo-routing.cjs')(html);
+if(!html.includes('id="reader-data"'))throw Error('Expected reviewed reader baseline');
+html=html.replace('<body>','<body>'+nav).replace('</head>','<style>.local-editor{padding:14px 18px;border-top:1px solid var(--line)}.local-editor summary{cursor:pointer;font-weight:600}.local-editor input,.local-editor textarea{display:block;width:100%;box-sizing:border-box;margin:6px 0 14px;padding:10px;background:var(--card);color:var(--ink);border:1px solid var(--line);font:inherit}.local-editor label{display:block}.local-editor p{font-size:14px}</style></head>');
+html=html.replace('<h2 class="sec" id="drafts">','<div class="ritedef"><b>Local editing and MCP handoff.</b> Open a draft’s editor, save changes, read your proverb and review the exact new revision. Then export its MCP posting handoff for a later explicit posting request. No GitHub credentials or posting connection are embedded. Source snapshots may be stale; refresh the live discussion before publishing.</div><h2 class="sec" id="drafts">');
+html=html.replace('</body>','<script>'+fs.readFileSync('work/local-reader-editor.js','utf8')+'</script></body>');
+fs.writeFileSync(out+'dtg-discussion-reader.html',html);
+let meeting=fs.readFileSync(out+'zkp-tf-question-reader.html','utf8');
+meeting=meeting.replace(/<div class="reader-switch"[\s\S]*?<\/div>/,'');
+fs.writeFileSync(out+'zkp-tf-question-reader.html',meeting);
+fs.writeFileSync(out+'index.html',`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Your local ZKP readers</title><style>body{max-width:900px;margin:70px auto;padding:24px;background:#f6f7f4;color:#172832;font:18px/1.6 system-ui}h1{font-size:32px}a{color:#185d58}section{padding:24px 0;border-top:1px solid #bdc9c5}small{font-size:14px}h2{font-size:23px}</style><h1>Your local ZKP readers</h1><p>Prepare the meeting, refine your updates, then review each post with its proverb.</p><section><h2><a href="zkp-tf-question-reader.html">Meeting agenda and questions →</a></h2><p>26 questions connecting the agenda, constructions, paper and book. Capture answers locally and export the meeting notes.</p><small>Paper references checked against the local PDF; DTG extensions remain explicit discussion questions.</small></section><section><h2><a href="dtg-discussion-reader.html#drafts">Discussion posts and proverbs →</a></h2><p>Edit drafts locally. Save a revision, read your proverb, acknowledge the exact text and export an MCP posting handoff.</p><small>Exporting prepares a later posting request. It does not send anything to GitHub. Local edits belong to this browser and origin; export before switching browsers.</small></section><section><a href="DTG-ZKP-research-loop.md">Research loop</a> · <a href="DTG-ZKP-upgrade-plan.md">Upgrade plan</a></section></html>`);
+console.log('Built local reader hub, linked meeting reader, editable discussion reader and MCP handoff export.');
+
+fs.writeFileSync(out+'zkp-tf-agenda-questions-2026-09-08.html', '<!doctype html><html lang="en"><meta charset="utf-8"><title>Meeting agenda and questions</title><meta http-equiv="refresh" content="0;url=/zkp-tf-question-reader.html"><p>The agenda and questions now share <a href="/zkp-tf-question-reader.html">one meeting reader</a>.</p></html>');

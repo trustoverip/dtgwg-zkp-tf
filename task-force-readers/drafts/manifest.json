@@ -1,0 +1,371 @@
+[
+  {
+    "id": "P",
+    "title": "P · dtgwg-zkp-spec PULL REQUEST — Working Draft 0.1: construction records, conformance apparatus, front matter",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-spec/compare/main...zk-book",
+    "sourceContext": {
+      "head": "6c296d3c0b4e94c15475b8aa9cdd45644d0a9bc5",
+      "threadUpdatedAt": null,
+      "error": null
+    },
+    "proverb": "What is offered to the fold is offered with its checks; the text may not say what the records cannot show.",
+    "ledger": 26,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "Push branch `zk-book` from ~/dtgwg-zkp-spec, then open the compare link. Three commits per COMMIT-PLAN (C1 front matter · C2 conformance/ + CI · C3 body + terms), each with the rite footer and DCO sign-off, no AI trailer. Preconditions: the editors line is now filled in the header; Appendix A carries an honest placeholder that says the relicensing statement is recorded when made, so the actual grant is still open and the appendix says the section is a draft until it exists. Paste this as the PR description; the title is the heading after the dash. Local publication package refreshed for the outcome-led specification and author meeting on 8 September. Check actual PR links, current source revisions and release prerequisites before posting.",
+    "prerequisites": [
+      "Re-read the live destination and resolve changes since the source snapshot.",
+      "Resolve phase A prerequisites, then open this as a draft PR."
+    ],
+    "revision": "62641c0e557ce27db63de787d63a113c26da99d3b408356bb3abbfcd860ca03f",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "R",
+    "title": "R · zkp-tf NEW discussion — A first working draft of the specification, how it is built, and the review it is asking for",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/new?category=ideas",
+    "sourceContext": {
+      "head": "3b6b3f2e76005d6f579d076ee2833ef56d599b65",
+      "threadUpdatedAt": null,
+      "error": null
+    },
+    "proverb": "A text reviewed once belongs to whoever wrote it; reviewed in rounds, it belongs to the fold.",
+    "ledger": 32,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "One post in place of H (the shape) and M (the three repositories), with the review rounds added — the part neither draft carried. H and M stay in the reader as the long forms if a thread ever needs them; do not post all three. Open draft PR P first. Before publishing, insert its actual URL and change the future-tense PR sentences to match the live state. Review timing is proposed until the task force agrees. The earlier detailed body is preserved under board/review-notes/. Local publication package refreshed for the outcome-led specification and author meeting on 8 September. Check actual PR links, current source revisions and release prerequisites before posting.",
+    "prerequisites": [
+      "Re-read the live destination and resolve changes since the source snapshot.",
+      "Open draft PR P; insert its actual URL and update the PR status sentences."
+    ],
+    "revision": "85b877aad4709dad93687a61951003261b20afb401ba31a7582742ad92d4440f",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "K",
+    "title": "K · cred-tf #39 — the four ZKP TF work items now have construction records; one proving system is new",
+    "target": "https://github.com/trustoverip/dtgwg-cred-tf/discussions/39",
+    "sourceContext": {
+      "head": "d8e317ee6ec13c327f2bc96022be6190500432ae",
+      "threadUpdatedAt": "2026-08-25T14:41:40Z",
+      "error": null
+    },
+    "proverb": "Four asks were spoken in one thread; each now has a record that can fail.",
+    "ledger": 28,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "Scott placed four work items on the record here on 25 August and is taking the artifact gap to the Berkeley authors on 8 September. This gives each item its record id and adds the one proving-system entry that changes the hash-side conversation. Post before the call; send Scott the records as well.",
+    "prerequisites": [
+      "Re-read the live destination and resolve changes since the source snapshot.",
+      "Open draft PR P and publish consolidated anchor R; include their actual links."
+    ],
+    "revision": "f556512ab03082c1e1314db6e5ab6538963233660578123de78ef5221a01b4e0",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "N",
+    "title": "N · cred-spec #38 — the blinded binder has a record; three things it needs from WD03",
+    "target": "https://github.com/trustoverip/dtgwg-cred-spec/issues/38",
+    "sourceContext": {
+      "head": "37074bdcd861c51f3e5b7868ce700832b17b73ce",
+      "threadUpdatedAt": "2026-09-05T21:23:52Z",
+      "error": null
+    },
+    "proverb": "A digest of a known thing is only a name for it; the salt is what makes the name unsayable.",
+    "ledger": 31,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "geoffturk filed this 2026-09-05 and its third tracked item is literally \"coordination with the ZKP task force's Q2 (blinded binder) work\". Record 008 is that work. Post after draft PR P and consolidated anchor R; add the actual links so the record ids resolve; send Scott a copy before the 8 Sept call, since it is the same item as cred-tf #39 bullet one.",
+    "prerequisites": [
+      "Re-read the live destination and resolve changes since the source snapshot.",
+      "Open draft PR P and publish consolidated anchor R; include their actual links."
+    ],
+    "revision": "9e5bdeb6b979bc853ab520869e0ccc462f6a95a24cd736b016220121a954f510",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "G",
+    "title": "G · zkp-tf #18 — seed set update: twelve construction records, the four #39/#40 work items placed",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/18",
+    "sourceContext": {
+      "head": "3b6b3f2e76005d6f579d076ee2833ef56d599b65",
+      "threadUpdatedAt": "2026-08-29T12:20:06Z",
+      "error": null
+    },
+    "proverb": "The board grows only where the book has already written; each row was a page first.",
+    "ledger": 23,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "A (posted 08-29) proposed the linked-entry format. This says the format is now the record form in the specification repository, lists what grew, and points the board at it. Short.",
+    "prerequisites": [
+      "Re-read the live destination and resolve changes since the source snapshot.",
+      "Open draft PR P and publish consolidated anchor R; include their actual links."
+    ],
+    "revision": "b571062e7a6791606f97891e5383b3309f5830c74af5fa2d4e10b39cd78f85c1",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "S",
+    "title": "S · zkp-tf — side note: an agent-first verifiable trust agent implementation, offered as a testbed for record 020",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/pull/21",
+    "sourceContext": {
+      "head": "3b6b3f2e76005d6f579d076ee2833ef56d599b65",
+      "threadUpdatedAt": "2026-08-29T12:43:33Z",
+      "error": null
+    },
+    "proverb": "A record that has never been run is a promise; give it somewhere to break.",
+    "ledger": 33,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "A side note, deliberately. It discloses a project of mine and offers it as somewhere the delegation record can be run and fail; it proposes nothing and asks for nothing to be adopted. Post after R and after the pull request is open, so it reads as a footnote to the delegation lane rather than as a pitch. The credentials-side long form is draft Q; do not post both into the same week.",
+    "prerequisites": [
+      "Re-read the live destination and resolve changes since the source snapshot.",
+      "Open draft PR P and publish consolidated anchor R; include their actual links."
+    ],
+    "revision": "9e14d1d7fd34fcb5f7b95999251588bb7e80db0a21896da0b6129fbe82f9223e",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "Q",
+    "title": "Q · cred-spec (new discussion) — an agents-only verifiable trust community on OpenVTC: a local twin, and five questions for the vocabulary",
+    "target": "https://github.com/trustoverip/dtgwg-cred-spec/discussions/new",
+    "sourceContext": {
+      "head": "37074bdcd861c51f3e5b7868ce700832b17b73ce",
+      "threadUpdatedAt": null,
+      "error": null
+    },
+    "proverb": "A city that scores its residents has a ledger; a city that reads them has a gate.",
+    "ledger": null,
+    "action": "publication",
+    "blocked": "Superseded — reference only",
+    "guidance": "A standing update, not a reply. Everything named runs as a local twin on one machine (68 acceptance rows); nothing is on the internet. The spec's own terms throughout. Public references only. The long form is mages_city/docs/NOTE_TOIP_2026-09-05.md. Posting is the co-chair's act.",
+    "prerequisites": [
+      "Re-read the live destination and resolve changes since the source snapshot.",
+      "Held: only prepare for publication if a relevant thread requests it."
+    ],
+    "revision": "b5c7542e1ab427c0b02c89a2104b7cb1de708b74a872eded893eb68b4ef4d766",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "A",
+    "title": "A · zkp-tf #18 — reply to Scott: accept the split, propose the card format",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/18",
+    "sourceContext": {
+      "head": "3b6b3f2e76005d6f579d076ee2833ef56d599b65",
+      "threadUpdatedAt": "2026-08-29T12:20:06Z",
+      "error": null
+    },
+    "proverb": "A row may say no more than its card can show; the board is light because the book beneath it is heavy.",
+    "ledger": 17,
+    "action": "publication",
+    "blocked": "Historical activation — publication unverified",
+    "guidance": "The named action. Accepts construction detail with Denys, proposes the linked-entry format (the card), names ADR-001 as first composed item and the four refinements going into the detail thread.",
+    "prerequisites": [],
+    "revision": "e13c5481808c5e69f0955999cb597e799b64b56c4a08b1d7c1589f131fe2315b",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "B",
+    "title": "B · cred-spec PR #26 — co-chair review (edge verifiability, verifier-relative)",
+    "target": "https://github.com/trustoverip/dtgwg-cred-spec/pull/26",
+    "sourceContext": {
+      "head": "37074bdcd861c51f3e5b7868ce700832b17b73ce",
+      "threadUpdatedAt": "2026-09-05T20:34:47Z",
+      "error": null
+    },
+    "proverb": "An edge is verifiable in the eye that checks it; name the state that eye was given to check against.",
+    "ledger": 18,
+    "action": "publication",
+    "blocked": "Retired — reference only",
+    "guidance": "Glenn wrote the text from the Q2 answer + albertoleon's two checkers. No reviews yet. Approve; one precision on \"anchor set\".",
+    "prerequisites": [],
+    "revision": "3f42b136f86a75f01e960b2c5d6d5bdde273cffe970fcbba3239651b70114daf",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "C",
+    "title": "C · cred-spec #17 — the eddsa-jcs-2022 default vs ZK-friendliness (ADR-001 X3)",
+    "target": "https://github.com/trustoverip/dtgwg-cred-spec/issues/17",
+    "sourceContext": {
+      "head": "37074bdcd861c51f3e5b7868ce700832b17b73ce",
+      "threadUpdatedAt": "2026-09-07T10:47:49Z",
+      "error": null
+    },
+    "proverb": "The signature that travels well is not the one that proves well; let the issuer carry both and choose neither for the other.",
+    "ledger": 19,
+    "action": "publication",
+    "blocked": "Historical activation — publication unverified",
+    "guidance": "Nobody has said this. Framed as an X3 item with the cheap fix, not an objection to the suite.",
+    "prerequisites": [],
+    "revision": "477e2e64491754b2fc3d683d81d2a2f81323d0bcc7b3847658aa12ce8b91414b",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "D",
+    "title": "D · zkp-tf #18 — follow-up on ADR-001 construction detail",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/18",
+    "sourceContext": {
+      "head": "3b6b3f2e76005d6f579d076ee2833ef56d599b65",
+      "threadUpdatedAt": null,
+      "error": null
+    },
+    "proverb": "The hard clause was the cheap one; the missing clause is the one the thief would have used.",
+    "ledger": 20,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "Reply in the existing board discussion, following the earlier construction comment. Do not open a duplicate discussion. The original Glenn-authored ADR thread has not been located. Local publication package refreshed for the outcome-led specification and author meeting on 8 September. Check actual PR links, current source revisions and release prerequisites before posting.",
+    "prerequisites": [
+      "Re-read #18 and the earlier construction comment before replying."
+    ],
+    "revision": "0235975ef62e5859d07f1c961cde33e5e7480fddc8b7a1c1f4b7fd373e79ad2c",
+    "sourceCheckedAt": "2026-09-08"
+  },
+  {
+    "id": "E",
+    "title": "E · zkp-tf PR — \"Add AGENT-RUNTIMES.md and link the evidence repository\" (branch `agent-runtimes-dco`)",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/pull/21",
+    "sourceContext": {
+      "head": "3b6b3f2e76005d6f579d076ee2833ef56d599b65",
+      "threadUpdatedAt": "2026-08-29T12:43:33Z",
+      "error": null
+    },
+    "proverb": "What is shared into the fold is shared with its traces; the gift is the method, not the answer.",
+    "ledger": 21,
+    "action": "publication",
+    "blocked": "Historical activation — publication unverified",
+    "guidance": "Branch is committed locally in the workbench. Push + open PR = Mitch (`git push -u origin agent-runtimes`, then open the compare link). Title below; body follows the rule line.",
+    "prerequisites": [],
+    "revision": "6188e3b16cf3f53be6f9e288c541e7855c3689f04e2e027ec71c0ba46f177793",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "F",
+    "title": "F · cred-spec #9 — the common-control linkage, answered from the proof layer (card 007)",
+    "target": "https://github.com/trustoverip/dtgwg-cred-spec/issues/9",
+    "sourceContext": {
+      "head": "37074bdcd861c51f3e5b7868ce700832b17b73ce",
+      "threadUpdatedAt": "2026-08-25T11:48:30Z",
+      "error": null
+    },
+    "proverb": "Two names from one hand are proven by the hand that holds them; the other hand must speak for its own.",
+    "ledger": 22,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "geoffturk's WD02 merge plan (#31, 09-02) lists #9 as \"stays open — and gains weight … the resolution is cross-TF work with the ZKP task force\". Nobody has written the voucher-side asymmetry. This is the ZKP TF's half. Post after re-reading #31's row for #9.",
+    "prerequisites": [],
+    "revision": "336df5b50373b9460c8ab63ffe56fa2357fd4771abf648b637cc902633005c32",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "H",
+    "title": "H · zkp-tf NEW discussion — The DTG ZKP specification: construction records, generated and machine-checked",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/new?category=ideas",
+    "sourceContext": {
+      "head": "3b6b3f2e76005d6f579d076ee2833ef56d599b65",
+      "threadUpdatedAt": null,
+      "error": null
+    },
+    "proverb": "A recipe is a claim with its kitchen attached; the book is a spec because every page can be cooked.",
+    "ledger": 24,
+    "action": "publication",
+    "blocked": "Superseded — reference only",
+    "guidance": "Title as in the heading. The specification repository (trustoverip/dtgwg-zkp-spec — Geoff and Ry, 2 September, Spec-Up-T template) is the home; this thread asks for shape objections before the pull request opens there. Register: plain specification language throughout. Add the PR link once P is open.",
+    "prerequisites": [],
+    "revision": "c3f4812b77641ccd7e956b8333b4e1b104402dfa9e729d302097e17909f1f16b",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "I",
+    "title": "I · cred-spec PR #26 — bmiller59's statement-3 carve-out converges with card 010 (optional)",
+    "target": "https://github.com/trustoverip/dtgwg-cred-spec/pull/26",
+    "sourceContext": {
+      "head": "37074bdcd861c51f3e5b7868ce700832b17b73ce",
+      "threadUpdatedAt": "2026-09-05T20:34:47Z",
+      "error": null
+    },
+    "proverb": "The half the community swore is the half the proof can reach; say which half before the verifier assumes both.",
+    "ledger": 25,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "Draft B was retired under the maintainer's rule — no approval-only posts. bmiller59 (09-02) then asked for exactly the carve-out card 010 carries: statement 3 proves the grant half only. This is a two-paragraph convergence note, not a review. Post only if the thread is still open when read.",
+    "prerequisites": [],
+    "revision": "f7de30f2842fbdbfb6d7f55379d64feb022890e8456850222343db34c7933c86",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "J",
+    "title": "J · cred-spec #31 — the #9 row has a home: construction 007 in the ZKP specification; the xref path",
+    "target": "https://github.com/trustoverip/dtgwg-cred-spec/issues/31",
+    "sourceContext": {
+      "head": "37074bdcd861c51f3e5b7868ce700832b17b73ce",
+      "threadUpdatedAt": "2026-09-05T20:14:08Z",
+      "error": null
+    },
+    "proverb": "The linkage no field may state is the requirement every field must serve.",
+    "ledger": 27,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "geoffturk's WD02 merge plan lists #9 as \"cross-TF work with the ZKP task force\". F answers #9 in full on its own thread; this is the one-paragraph pointer for the plan, plus the two rows where the plan and the ZKP records already agree. Post after F.",
+    "prerequisites": [],
+    "revision": "e818e024a368185526db792632177f44ecd2d697b90ee730c57a8288ac94096f",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "L",
+    "title": "L · zkp-tf #17 — the SIROS catalog as a proving-system entry; the pilot made concrete",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/17",
+    "sourceContext": {
+      "head": "3b6b3f2e76005d6f579d076ee2833ef56d599b65",
+      "threadUpdatedAt": "2026-08-25T11:53:59Z",
+      "error": null
+    },
+    "proverb": "A catalog says where a thing came from; a registry says a stranger made it again; one table, two columns.",
+    "ledger": 29,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "Follows the 25 August post (catalog = provenance, registry = reproduction, pilot one entry). The manifest was fetched 5 September. Ends with a question the SIROS team can answer.",
+    "prerequisites": [],
+    "revision": "7b447f21a044c5f5edac1b371de22b45d2ce8c68173e9d7a8c6b8c9a64238af5",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "M",
+    "title": "M · zkp-tf #14 — three repositories, one rule; and the ZK Book edition",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/14",
+    "sourceContext": {
+      "head": "3b6b3f2e76005d6f579d076ee2833ef56d599b65",
+      "threadUpdatedAt": "2026-08-12T12:33:18Z",
+      "error": null
+    },
+    "proverb": "Three rooms, one door each; what passes between them is a record, never a dependency.",
+    "ledger": 30,
+    "action": "publication",
+    "blocked": "Superseded — reference only",
+    "guidance": "#14 is the Show-and-tell thread for the evidence repository (\"where our spec's claims go to be tested\"). This post lays out how the task-force repository, the specification repository and the evidence repository relate, what crosses between them, and why the evidence repository keeps the specification as a book. Link it from H.",
+    "prerequisites": [],
+    "revision": "760e267d39ffaed772cb62be441573ded9ff19da654ac1ab827f5bfc611bab3f",
+    "sourceCheckedAt": "2026-09-07T11:11:40.756Z"
+  },
+  {
+    "id": "T",
+    "title": "T · After-call note — DTG ZKP questions, clarifications and next artifacts",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/new?category=ideas",
+    "sourceContext": {
+      "head": null,
+      "threadUpdatedAt": null,
+      "error": null
+    },
+    "proverb": "A text reviewed once belongs to whoever wrote it; reviewed in rounds, it belongs to the fold.",
+    "ledger": 32,
+    "action": "publication",
+    "blocked": "",
+    "guidance": "Publish after the call. Replace every bracketed placeholder with checked meeting outcomes and public links. This is a prepared draft, not a meeting record.",
+    "prerequisites": [
+      "Complete and verify the attributed call outcomes.",
+      "Attach the meeting reader or insert a public document link; localhost is not shareable.",
+      "Re-read the live destination and remove all placeholders."
+    ],
+    "revision": "866bf7b63571b43423ce8792dca00378f084c2dc68a55f5bbc7c5713a4d709d3",
+    "sourceCheckedAt": null
+  }
+]
