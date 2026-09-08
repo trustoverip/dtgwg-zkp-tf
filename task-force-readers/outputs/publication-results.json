@@ -1,0 +1,115 @@
+[
+  {
+    "id": "P",
+    "url": "https://github.com/trustoverip/dtgwg-zkp-spec/pull/8",
+    "verifiedAt": "2026-09-08T13:35:00.791Z"
+  },
+  {
+    "id": "R",
+    "url": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/23",
+    "nodeId": "D_kwDOSjvJKc4ApGnl",
+    "bodySha256": "41d22052bdeb9371eb8843d570a25f60c9d5fc6223cc0df3868db4425095a562",
+    "reviewRevision": "85b877aad4709dad93687a61951003261b20afb401ba31a7582742ad92d4440f",
+    "verifiedAt": "2026-09-08T13:32:18.971Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "K",
+    "url": "https://github.com/trustoverip/dtgwg-cred-tf/discussions/39#discussioncomment-18350306",
+    "nodeId": "DC_kwDOQM7zos4BGADi",
+    "bodySha256": "741ff731e5507b8e494ee108a10aee5eaea6f9a9b9bad40cc72a084b432366b1",
+    "reviewRevision": "f556512ab03082c1e1314db6e5ab6538963233660578123de78ef5221a01b4e0",
+    "verifiedAt": "2026-09-08T13:32:21.136Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "N",
+    "url": "https://github.com/trustoverip/dtgwg-cred-spec/issues/38#issuecomment-5585953257",
+    "nodeId": "IC_kwDOTQHnjs8AAAABTPLh6Q",
+    "bodySha256": "dde3c62349ee066810f38dc9661ddc3f33a18745b83f9114949c3aadcb8a320f",
+    "reviewRevision": "9e5bdeb6b979bc853ab520869e0ccc462f6a95a24cd736b016220121a954f510",
+    "verifiedAt": "2026-09-08T13:32:22.879Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "F",
+    "url": "https://github.com/trustoverip/dtgwg-cred-spec/issues/9#issuecomment-5585953668",
+    "nodeId": "IC_kwDOTQHnjs8AAAABTPLjhA",
+    "bodySha256": "aa2d6811604f0ec63a1862a9478b4d5666d725949c0a676948814701d1646954",
+    "reviewRevision": "336df5b50373b9460c8ab63ffe56fa2357fd4771abf648b637cc902633005c32",
+    "verifiedAt": "2026-09-08T13:32:25.042Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "I",
+    "url": "https://github.com/trustoverip/dtgwg-cred-spec/pull/26#issuecomment-5585954117",
+    "nodeId": "IC_kwDOTQHnjs8AAAABTPLlRQ",
+    "bodySha256": "2bf7416593ea0dd8ecea660a1c8a045634ff1cff02822ad02d02120dd16a6d9a",
+    "reviewRevision": "f7de30f2842fbdbfb6d7f55379d64feb022890e8456850222343db34c7933c86",
+    "verifiedAt": "2026-09-08T13:32:27.103Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "J",
+    "url": "https://github.com/trustoverip/dtgwg-cred-spec/issues/31#issuecomment-5585954639",
+    "nodeId": "IC_kwDOTQHnjs8AAAABTPLnTw",
+    "bodySha256": "f1255dca8522d1dc6431045dd42852176304ea1fb32105edb1182668fdd7051a",
+    "reviewRevision": "e818e024a368185526db792632177f44ecd2d697b90ee730c57a8288ac94096f",
+    "verifiedAt": "2026-09-08T13:32:29.485Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "G",
+    "url": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/18#discussioncomment-18350307",
+    "nodeId": "DC_kwDOSjvJKc4BGADj",
+    "bodySha256": "d473d18dd52759940d8da0f8c12d7ce8d259ad0cdc94d890bda6cf0a36fc5941",
+    "reviewRevision": "b571062e7a6791606f97891e5383b3309f5830c74af5fa2d4e10b39cd78f85c1",
+    "verifiedAt": "2026-09-08T13:32:32.103Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "L",
+    "url": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/17#discussioncomment-18350308",
+    "nodeId": "DC_kwDOSjvJKc4BGADk",
+    "bodySha256": "bb74f1e909bce6a73dfd2e7aa9510d404f9606cead52399f7696df6c4b947b32",
+    "reviewRevision": "7b447f21a044c5f5edac1b371de22b45d2ce8c68173e9d7a8c6b8c9a64238af5",
+    "verifiedAt": "2026-09-08T13:32:34.154Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "S",
+    "url": "https://github.com/trustoverip/dtgwg-zkp-tf/pull/21#issuecomment-5585956182",
+    "nodeId": "IC_kwDOSjvJKc8AAAABTPLtVg",
+    "bodySha256": "f4afcb4a96897308372e40af15049889873810d949e6b8bd16b677627da7ecbe",
+    "reviewRevision": "9e14d1d7fd34fcb5f7b95999251588bb7e80db0a21896da0b6129fbe82f9223e",
+    "verifiedAt": "2026-09-08T13:32:35.858Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "D",
+    "url": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/18#discussioncomment-18350310",
+    "nodeId": "DC_kwDOSjvJKc4BGADm",
+    "bodySha256": "91547c37fab82630c5bd96c2d1e903d346017a3a69b736773e34cd495b2b40cb",
+    "reviewRevision": null,
+    "verifiedAt": "2026-09-08T13:32:37.846Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "GATE",
+    "url": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/24",
+    "nodeId": "D_kwDOSjvJKc4ApGnp",
+    "bodySha256": "1b65359c5246e058e63036f93312ad9c802b5e0f2d95748009b9cd103407876c",
+    "reviewRevision": null,
+    "verifiedAt": "2026-09-08T13:32:39.850Z",
+    "reusedExisting": false
+  },
+  {
+    "id": "CATALOGUE",
+    "url": "https://github.com/trustoverip/dtgwg-zkp-spec/discussions/9",
+    "nodeId": "D_kwDOUMUAQ84ApGn1",
+    "bodySha256": "871dd8d66615b11950d8d0b3b35544502913200e69d3a8947f4147f7116f5594",
+    "reviewRevision": null,
+    "verifiedAt": "2026-09-08T13:34:30.394Z",
+    "reusedExisting": false
+  }
+]
