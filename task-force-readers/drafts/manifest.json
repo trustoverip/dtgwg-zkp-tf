@@ -348,24 +348,23 @@
   },
   {
     "id": "T",
-    "title": "T · After-call note — DTG ZKP questions, clarifications and next artifacts",
-    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/new?category=ideas",
+    "title": "T · After-call note — after the 8 September call: clarifications attributed, open points, what changed in the draft",
+    "target": "https://github.com/trustoverip/dtgwg-zkp-tf/discussions/23",
     "sourceContext": {
       "head": null,
       "threadUpdatedAt": null,
       "error": null
     },
-    "proverb": "A text reviewed once belongs to whoever wrote it; reviewed in rounds, it belongs to the fold.",
-    "ledger": 32,
+    "proverb": "A call leaves the room as notes; the notes leave the notes as records, or they leave nothing.",
+    "ledger": "35",
     "action": "publication",
     "blocked": "",
-    "guidance": "Publish after the call. Replace every bracketed placeholder with checked meeting outcomes and public links. This is a prepared draft, not a meeting record.",
+    "guidance": "Reply under discussion #23 after the anchor. Attributions are filled from the Confluence meeting notes (page 1132953601, version 6); confirm each against the page or the recording before posting. This is a prepared draft, not a meeting record.",
     "prerequisites": [
-      "Complete and verify the attributed call outcomes.",
-      "Attach the meeting reader or insert a public document link; localhost is not shareable.",
-      "Re-read the live destination and remove all placeholders."
+      "Confirm the attributions against the Confluence page (version 6) or the recording.",
+      "Re-read the live destination and resolve changes since the source snapshot."
     ],
-    "revision": "866bf7b63571b43423ce8792dca00378f084c2dc68a55f5bbc7c5713a4d709d3",
+    "revision": "ce9ec6ac2d93bacdbce8fbc06a44fe5ac31290b7fcf0e3303e1e18ab7c1f7eda",
     "sourceCheckedAt": null
   }
 ]

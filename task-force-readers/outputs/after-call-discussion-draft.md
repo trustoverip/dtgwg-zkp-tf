@@ -1,19 +1,16 @@
-Following the ZKP task-force call on 8 September, I am sharing the agenda and question reader we used to frame the discussion about implementing ZKPs for decentralized trust graphs.
+Following the task-force call on 8 September (notes on the [ToIP wiki](https://lf-toip.atlassian.net/wiki/spaces/HOME/pages/1132953601)), the points that bear on the working draft, attributed as the notes record them. Corrections to any attribution or reading are welcome on this thread.
 
-Meeting document: [ADD SHARED DOCUMENT OR ATTACHMENT LINK]
-Meeting notes and attributed answers: [ADD PUBLISHED NOTES LINK]
+**Confirmed.** ADR-001, the community-anchored proof, is the first proof to build. Arka Rai Choudhuri described it as the kind of use case the Berkeley team's follow-up work is aimed at — not what the first paper does, but what the Linux-kernel follow-up ties to; that follow-up models the community and was described as forthcoming. Record 010 stays the flagship; the credential-bound membership presentation stays the first milestone under it (WG-01).
 
-The reader connects the proof-of-personhood paper to broader DTG implementation questions: the first proof statement, offline voucher artifacts, witness consistency and composition, context and revocation, construction and setup choices, and the evidence needed to select an implementation. Personhood is one use case within this broader scope.
+**Clarifications that changed a record.**
 
-It also asks how we should build the book: which formal mappings need author review, which worked example should come first, and which artifacts would let another implementer reproduce the result. The paper references were checked against the local source PDF; proposed DTG extensions remain questions for review.
+- *The offline voucher.* Sanjam Garg described a blind-signature vouch as the practical route: the voucher blind-signs at vouch time, and the presenter later proves possession of the unblinded signature, so the voucher need not be online and no helper agent sees the relationship. Record 010 now carries it as a construction option, marked conjecture with the call as its source; how it composes with the common-control and non-revocation clauses is the open design question.
+- *Freshness and unlinkability.* Two parties who interact again in the same context reuse the same pseudonyms and can be linked; breaking that needs a new mechanism (Arka). This concerns pseudonym linkability within the same context; it does not remove challenge freshness or status checks. The local record 008 revision discusses that distinction.
+- *The signature scheme is the non-swappable choice.* A proof system can be replaced by a software update; the credential signature and format cannot without re-issuing every credential, and a post-quantum proof system does not mask a pre-quantum signature (Sanjam, Denys, Arka). The draft's Security Considerations already carry the post-quantum horizon per record; the construction-selection question is therefore issuer-side first — the X3 issuance line every record states.
+- *Ambient verifiability.* Nicholas Racz named the KERI term for what the offline case needs: caches that supply the proofs so no participant need be online. The set-root conventions now say who supplies roots and witnesses is part of the registry-operator adversary a profile states, not of the proof.
 
-Points to carry forward from the call:
+**Still open, for the thread.** Which parts of the personhood framework generalise beyond personhood when the credential is a membership or authority credential; what exactly is authenticated inside the proof and what is checked outside it (WG-02, WG-06a); whether the trade-off between custom and general-purpose proving sits with the community's governance or below it (the notes record: below it, with a case for limiting the number of choices a community supports); and Drummond Reed's requirement that proofs over the standard DTG credentials interoperate broadly.
 
-- Author clarifications: [ADD ATTRIBUTED CLARIFICATIONS AND SOURCE REFERENCES]
-- Proposals still requiring discussion: [ADD OPEN QUESTIONS OR DISAGREEMENTS]
-- Recorded working-group decisions, if any: [ADD DECISIONS WITH NOTES REFERENCES, OR STATE NONE RECORDED]
-- Next artifacts and volunteered owners: [ADD AGREED NEXT STEPS; DO NOT INFER ASSIGNMENTS]
+**What changed in the draft since the call**, on PR #8's branch as of 14 September (second commit `e1afc3f`): records 007 and 020 revised against the credential specification's merged VDC and VAC text and the common-control thread ([cred-spec #9](https://github.com/trustoverip/dtgwg-cred-spec/issues/9), 10 September); new records 009 (hidden-value equality) and 021 (VAC attenuation chain); the review-notes index in Appendix E for Round 1. One correction to the anchor above: the ADR-001 crosswalk counts there (17 covered · 5 refined · 2 added · 3 partial · 4 open) were the pre-review record; the draft carries 15 · 4 · 2 · 3 · 4, and the machine-readable request is the source of truth. Evidence states are unchanged; nothing is adopted.
 
-I will use these notes to prepare traceable updates to the specification, construction records, book and verifier worklist. Related spec changes: [ADD ACTUAL PR LINK WHEN AVAILABLE, OR STATE THAT A DRAFT IS BEING PREPARED].
-
-Please correct any attribution or interpretation in the notes, and add comments on the unresolved questions. A paper section match or a successful component test does not by itself establish the security of the composed DTG proof. The implementation and adoption decisions need their own evidence and review.
+**Asked of members**, as on the call: read the question reader and the draft, and say which questions or records need direct attention. A position record in the shape the evidence repository's `PATH-MAP.md` describes is the most useful form.
