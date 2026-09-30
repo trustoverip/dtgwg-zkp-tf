@@ -1,0 +1,67 @@
+name: Deploy implementation guide
+# Renders guide/ and publishes it with GitHub Pages at https://trustoverip.github.io/dtgwg-zkp-tf/,
+# the address the DTG ZKP specification links to for its companion guide.
+# Pages must be enabled by a repository admin first: Settings > Pages > Source: "GitHub Actions".
+# Until it is, the build and deploy jobs are skipped and the run stays green.
+on:
+  push:
+    branches: [main]
+    paths: ['guide/**', '.github/workflows/guide-deploy.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: guide-deploy
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: read
+    outputs:
+      enabled: ${{ steps.pages.outputs.enabled }}
+    steps:
+      - id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(gh api "repos/${{ github.repository }}/pages" --jq .build_type 2>/dev/null)" = "workflow" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GitHub Pages is not set to the GitHub Actions source; nothing deployed."
+          fi
+  build:
+    needs: check
+    if: needs.check.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: guide
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: guide/package-lock.json
+      - run: npm ci --ignore-scripts
+      - run: npm run render
+      - run: npm run check
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: guide/docs/
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

@@ -1,0 +1,27 @@
+{
+  "sourceRepository": "trustoverip/dtgwg-zkp-spec",
+  "sourceRevision": "315cf4466bfcfe3d70c88a6706d0a6ca633c60c9",
+  "status": "editorial extraction draft; no adoption or new evidence state",
+  "files": [
+    {
+      "source": "spec/implementation-guide.md",
+      "destination": "guide/spec/implementation-guide.md",
+      "sourceSha256": "2717a02b8fd3a746c57683d00cc506ffeb98479eed2a76ce6e178566a3b9711f"
+    },
+    {
+      "source": "spec/trust-graph.md",
+      "destination": "guide/spec/trust-graph.md",
+      "sourceSha256": "842268bb07731bdce1172615cb6319ab2ba561595c6b2f60c7a963e0ceafcf9b"
+    },
+    {
+      "source": "spec/cryptographic-background.md",
+      "destination": "guide/spec/cryptographic-background.md",
+      "sourceSha256": "df272e129c32c0ddde34c85267bd75331c5c03e500466b1dbcd2c2a857b80348"
+    }
+  ],
+  "localRevisionNote": "The sourceRevision pins the original editorial extraction only. The 23 September hidden-vetting and Lean-coverage additions are local working-draft edits, not contained in that revision; their evidence must be pinned before publication.",
+  "restructure": {
+    "date": "2026-09-23",
+    "note": "Restructured as a navigation companion: new chapters constructions.md and evidence.md; research-and-book.md, siros-review.md and editorial-worklist.md removed from the guide (working material kept in the evidence repository: board/review-notes/ and zkbook/research-log/); working-group notes removed (tracked in the specification's appendix)."
+  }
+}

@@ -28,6 +28,10 @@ We state this plainly because it determines who is accountable when a determinat
 
 It will also cover any trust-task protocols specific to generating, presenting, or verifying these proofs that aren't already specified in **DTG Core Trust Task Protocols V1.0** (from the Trust Task Protocols TF).
 
+## Implementation guide
+
+The informative [Implementation Guide](guide/README.md) contains the implementation walkthrough, cryptographic background and reviewer reading paths. Construction definitions and conformance remain in [the ZKP specification](https://github.com/trustoverip/dtgwg-zkp-spec). This is an editorial extraction for review, following the 22 September discussion.
+
 ## Milestone
 
 A complete **Working Draft ready for discussion at IIW #43 (3–5 November 2026)**. Interim target: a shareable strawman of the proof-of-liveness requirements by September, to put in front of the cryptography teams.

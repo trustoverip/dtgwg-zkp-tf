@@ -1,0 +1,15 @@
+import {readFileSync, existsSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const spec=JSON.parse(readFileSync('specs.json')).specs[0];
+for(const path of spec.markdown_paths) assert.ok(existsSync(`spec/${path}`), `Missing chapter ${path}`);
+assert.ok(!existsSync('conformance/records'), 'Records belong to the core specification');
+const html=readFileSync('docs/index.html','utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'');
+const ids=new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
+const missing=[...html.matchAll(/href="#([^"]+)"/g)].map(m=>m[1]).filter(id=>!ids.has(id));
+assert.deepEqual([...new Set(missing)], [], 'Broken internal links');
+assert.ok(!/\[\[(?:ref|xref|tref):/.test(html), 'Unresolved Spec-Up-T reference');
+for(const title of ['Reading this guide','Construction walkthroughs','Reading the evidence','Cryptographic Background','Attribution and maintenance']) assert.ok(html.includes(title), `Missing ${title}`);
+const map=JSON.parse(readFileSync('source-map.json'));
+assert.match(map.sourceRevision,/^[a-f0-9]{40}$/);
+for(const item of map.files) assert.ok(existsSync(item.destination.replace(/^guide\//,'')));
+console.log(`Guide checked: ${spec.markdown_paths.length} chapters, internal links resolved, source revision pinned, no duplicate catalogue.`);

@@ -1,0 +1,49 @@
+{
+  "specs": [
+    {
+      "title": "DTG ZKP Implementation Guide",
+      "description": "Informative implementation walkthrough, cryptographic background and reviewer reading paths for the DTG ZKP specification.",
+      "author": "Trust over IP Foundation — DTG Working Group, ZKP Task Force",
+      "spec_directory": "./spec",
+      "spec_terms_directory": "terms-definitions",
+      "output_path": "./docs",
+      "markdown_paths": [
+        "header.md",
+        "intro.md",
+        "implementation-guide.md",
+        "trust-graph.md",
+        "constructions.md",
+        "evidence.md",
+        "cryptographic-background.md",
+        "attribution.md"
+      ],
+      "logo": "https://raw.githubusercontent.com/trustoverip/spec-up-t/refs/heads/master/src/install-from-boilerplate/boilerplate/static/logo.svg",
+      "logo_link": "https://github.com/trustoverip/spec-up-t",
+      "favicon": "https://raw.githubusercontent.com/trustoverip/spec-up-t/refs/heads/master/src/install-from-boilerplate/boilerplate/static/favicon.ico",
+      "source": {
+        "host": "github",
+        "account": "trustoverip",
+        "repo": "dtgwg-zkp-tf"
+      },
+      "external_specs": [
+        {
+          "external_spec": "ToIP_Glossary",
+          "gh_page": "https://glossary.trustoverip.org",
+          "url": "https://github.com/trustoverip/ctwg-main-glossary"
+        },
+        {
+          "external_spec": "DTG_CRED",
+          "gh_page": "https://trustoverip.github.io/dtgwg-cred-spec/",
+          "url": "https://github.com/trustoverip/dtgwg-cred-spec"
+        },
+        {
+          "external_spec": "DTG_ZKP",
+          "gh_page": "https://trustoverip.github.io/dtgwg-zkp-spec/",
+          "url": "https://github.com/trustoverip/dtgwg-zkp-spec"
+        }
+      ],
+      "katex": false,
+      "anchor_symbol": "§"
+    }
+  ]
+}
