@@ -309,6 +309,8 @@ At minimum, the transcript must commit to:
 
 **LIV-ALG-08 — Continuity mechanisms do not restore broken guarantees.** Where a profile uses hash chaining or another succession mechanism to preserve evidence lineage across suite rotations, it **MUST** state which property the chain preserves. Such chaining **MUST NOT** be represented as restoring confidentiality, unlinkability, or unforgeability after a relied-on primitive is no longer secure.
 
+**LIV-ALG-09 — Issuance separability (proposed 2026-10-12).** A profile **MUST** state whether the issuer signature on a credential is verified inside the proof or over a published commitment or root outside it. A profile that verifies a pre-quantum signature inside the proof **MUST** state that its forgery horizon is the signature's, whatever the proof system's post-quantum status, because the credential signature is the layer a software update cannot swap. A profile that signs a published commitment or root **SHOULD** name the post-quantum suite for that signature and the hybrid overlap rule, by reference to the DTG VTI specification's proof-set requirements (VTI-KEY-103..105) and the cryptosuites the Trust Tasks framework pins.
+
 ### 9.10 Failure and degraded mode
 
 **LIV-FAIL-01 — Typed failure.** Implementations **MUST** distinguish at least cryptographic invalidity, unsupported profile/suite, stale proof, stale capture/attestation, unacceptable issuer/accreditation, revoked/suspended status and local policy rejection.
@@ -606,6 +608,7 @@ The RAHP refresh is deliberately **not** treated as a transfer of normative auth
 - Established the requirements document as the semantic source of truth, with the boundary decision document as the operational decision method and the predicate register as the recorded implementation view.
 - Added the construction-selection gate and treatment of experimental circuit benchmarks pending independent verification.
 - Added post-quantum migration readiness, security-horizon and hash-chain continuity guardrails.
+- Proposed 2026-10-12 (not yet ratified): LIV-ALG-09 issuance separability — where the issuer signature is verified decides the forgery horizon; the published-commitment route is the post-quantum one at presentation cost today. Source: the 8 September call (signature scheme as the non-swappable choice) and the post-quantum chapter of the implementation guide.
 - Added lifecycle requirements covering bounded epochs, cryptoperiods, retention, revocation cadence and historical evidence.
 - Strengthened biometric-provider inputs for enrolment-dedup quality and multi-issuer biometric independence.
 - Added `F_PoP` and `f-distinct` terminology alignment with the primary cryptographic reference.

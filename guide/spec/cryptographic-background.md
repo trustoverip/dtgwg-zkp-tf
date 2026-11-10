@@ -404,10 +404,11 @@ c === a * b;
 - q-Strong Diffie-Hellman (q-SDH)
 - Knowledge of Exponent (KEA)
 
-**Post-Quantum Status:**
-- Pairing-based SNARKs: Broken by Shor's algorithm
-- Hash-based (FRI): Quantum-resistant
-- IPA/Bulletproofs: Broken by Shor's algorithm
+**Post-Quantum Status** (the split matters — see [Post-quantum considerations](#post-quantum-considerations)):
+- Pairing-based SNARKs (Groth16, KZG-backed PLONK): soundness broken by Shor's algorithm; zero-knowledge unaffected (perfect)
+- Hash-based (FRI, Ligero, WHIR, Binius): plausibly quantum-resistant in the quantum random-oracle model, subject to the proximity-gap bound the parameters assume
+- IPA/Bulletproofs: soundness broken by Shor's algorithm
+- Discrete-log signatures the credentials carry (Ed25519, ECDSA, BLS, PS): unforgeability broken — the layer no proof system can mask
 
 **Applied to:** Security audits, production deployment, risk assessment, long-term system design
 

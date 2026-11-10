@@ -16,6 +16,7 @@
         "evidence.md",
         "formal-verification.md",
         "cryptographic-background.md",
+        "post-quantum.md",
         "attribution.md"
       ],
       "logo": "https://raw.githubusercontent.com/trustoverip/spec-up-t/refs/heads/master/src/install-from-boilerplate/boilerplate/static/logo.svg",
