@@ -14,6 +14,7 @@
         "trust-graph.md",
         "constructions.md",
         "evidence.md",
+        "formal-verification.md",
         "cryptographic-background.md",
         "post-quantum.md",
         "attribution.md"

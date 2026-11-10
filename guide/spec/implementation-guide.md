@@ -35,6 +35,8 @@ For the offline-voucher outcome, establish the link between the voucher's relati
 
 Choose a route that can authenticate the actual credentials and use the holder's available keys. Compare setup assumptions, disclosure, security requirements, proving time, memory and verification cost for the same workload. A fast component benchmark is not evidence that the full profile is compatible or affordable.
 
+[Comparing complete costs](#comparing-complete-costs) explains the measurement boundaries, proof-reuse assumptions and resource scope for that comparison.
+
 Define exactly which checks occur inside the proof and which the verifier performs outside it. Both sets of checks contribute to the acceptance statement. Name the profile and its version so a different circuit, root encoding or public-input layout cannot silently be substituted.
 
 ### Step 4: Implement the request and presentation exchange
