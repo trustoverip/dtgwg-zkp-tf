@@ -54,7 +54,7 @@ node formal/scripts/check-coverage.mjs
 node formal/scripts/check-clause-review.mjs
 sh formal/scripts/check-axioms.sh
 (cd formal && lake env leanchecker --fresh Formal)
-python ../kappa-evidence-mage/verify_bundle.py formal/evidence/kappa/2026-10-27_76
+python ../kappa-evidence-mage/verify_bundle.py formal/evidence/kappa/2026-11-19_79-r2
 ```
 
 The last line needs a sibling checkout of [kappa-evidence-mage](https://github.com/mitchuski/kappa-evidence-mage). `formal/README.md` in the evidence repository lists every check and what it guards. The repository's CI runs the same checks on Linux on every push that touches the models or the records.
@@ -65,10 +65,33 @@ The last line needs a sibling checkout of [kappa-evidence-mage](https://github.c
 |---|---|---|---|---|---|---|
 | 1 | 2026-09-23 | uncommitted | 18 · 60 | 67 · 2 | PASS when run; the stored receipt later recorded inventory drift | not minted |
 | 2 | 2026-10-27 | `599f840` | 19 · 68 | 76 · 34 | PASS | `sha256:e2d4b47fe2fcfb80bacdcba69becba092efb23377fc22c50b54b94673691f21a` |
+| 3 | 2026-11-19 | `7cc658e` | 19 · 70 | 79 · 37 | PASS | `sha256:6e963611fcdd91dfc0e2f1ec6f6ad8e3d70b2f9cd07e404bb8bef6e95eb6464d` |
 
 In run 2, every one of the 76 roots sits within the standard axioms: 23 depend on none, 21 on `propext` only, 31 on `propext` and `Quot.sound`, and 1 on all three. The same holds for the 34 review-witness theorems. There is no `sorry` and no declared axiom anywhere in the package.
 
 Run 2 was reproduced from a fresh clone with no build cache: every gate passed, the replay was clean, and the bundle verified to the same root using the published verifier. An earlier seal from the same day (`sha256:f4747fa4…`) was superseded before publication, when the record 024 write-up was reworded to cite only the published construction source.
+
+In run 3, the 79 roots sit within the same axioms: 24 depend on none, 21 on `propext` only, 33 on `propext` and `Quot.sound`, and 1 on all three; the 37 review-witness theorems likewise. The first commit of that day (`8532d19`) carries its own seal (`sha256:76c82209…`), kept as the record of that revision; the register row is the later one, after the circuit was built.
+
+### Run 3 (2026-11-19)
+
+**A cryptographic review found what the model could not.** The review of records 007, 009, 022, 024 and 025 filed as [dtgwg-zkp-spec #25](https://github.com/trustoverip/dtgwg-zkp-spec/issues/25) reads the constructions themselves. Its findings on record 025 are instructive for what model-level verification is: the run 2 model of that record was sound for the relation it encoded, every theorem held, and the relation was still the wrong one. Soundness of a relation says nothing about whether the relation meets the record's stated need. Findings F10 to F12 below record this.
+
+**Record 025 reworked, and its model rebuilt.** The enrolment leaf commits to the image of its secret, a pre-rotation digest and a revocation handle. The rotation is authorised by the pre-committed next secret and opens the retiring leaf by the image, so the current secret is not a witness. The replacement leaf carries the same handle.
+
+| theorem | what it shows |
+|---|---|
+| `soundness` | clauses 1–6: the retiring leaf is under `root_C`, its handle is not revoked at the epoch, its pre-rotation digest names a next secret's image, the presenter opens the replacement under that secret and the same handle, and the tag is the retiring leaf's |
+| `next_secret_fixed` | one enrolment leaf admits one next-secret image and one tag (replaces `replacement_fixed`) |
+| `handle_carried_forward` | every opening of the admitted replacement carries the retiring leaf's handle and the next secret's image |
+| `revocation_survives_rotation` | a handle revoked after the rotation fails the neighbour clause for every opening of the replacement |
+| `fresh_handle_escapes` | the handle clause is necessary: under the run 2 relation, a replacement with a fresh handle is unrevoked after the old handle is revoked |
+
+The other run 2 theorems of record 025 carry over. A review witness rotates a leaf whose secret image has no preimage at all, which shows the relation cannot depend on the current secret. That a party without the next secret cannot rotate is knowledge soundness of the proof system, and stays outside the model.
+
+**A circuit found what the review could not.** The reworked record was then built as a Groth16 circuit in the evidence repository (11,987 constraints, thirteen fixtures). Minting the first leaf failed on paper before any proof ran: a pre-rotation digest over the whole next leaf needs that leaf, which needs the leaf after it, without end. The digest now commits to the next secret's image, as a key event log commits to the next key (F13). Model, record and circuit were corrected together, and record 025 is at `constructed`.
+
+**Re-binding.** Seven records changed in the fold; the second pass touched five (006, 010 and 023, and 024 and 025 again). Each clause review is re-bound to its record's new hash with the reason; record 025's seven clauses were reviewed afresh. The models of records 007, 009, 022 and 024 are unchanged: the review's findings on them concern hiding, encodings, disclosure and anonymity, which no model here covers.
 
 ### Run 2 (2026-10-27)
 
@@ -115,7 +138,11 @@ A finding is a gap between a model and the claim made for it. None is an attack 
 | F6 | 024 | The counting model is sound for what it states. Clause 5 is not established, and the spent set is sequential rather than a durable transaction. | scope already accurate; implementation work open |
 | F7 | specification | The Introduction counted seventeen formal records (omitting 013) and cited superseded root and clause counts. | fixed |
 | F8 | 010, 023, 024 | Record 025's issuance requires a rotation-tag check in the records that read an enrolment leaf; none had it. | clause added to all three records; composing it into their models open (covered generically by `rotated_secret_retired`) |
-| F9 | 020, 021 | In the chain model, each link's signature check is a proposition the prover supplies; nothing ties it to a signature function. The theorems are sound, but this clause is assumed rather than derived. | observation; the record owner to decide whether the signature relation should be modelled |
+| F9 | 020, 021 | In the chain model, each link's signature check is a proposition the prover supplies; nothing ties it to a signature function. The theorems are sound, but this clause is assumed rather than derived. | observation; the record owner to decide whether the signature relation should be modelled. The cryptographic review adds that verifying a link's signature while its issuer stays hidden is itself unspecified: an open requirement of both records |
+| F10 | 025 | The run 2 relation took the current secret as a witness, so a lost secret could not rotate, although the record's stated need covers loss. The model was sound for the relation and silent on the need. Found by cryptographic review (#25). | relation reworked; model rebuilt |
+| F11 | 025 | The run 2 relation gave the replacement leaf a fresh revocation handle, so a member could rotate out of reach of revocation. Found by cryptographic review (#25). | handle carried forward; `revocation_survives_rotation` proved, `fresh_handle_escapes` as the counter-deployment |
+| F12 | 010, 023, 024, 025 | The spent-tag set was not required to be sorted, so the tag-absence clause of F8 was a neighbour proof over a set with no order. Found by cryptographic review (#25). | sorted root required and named as a public input; composing it into the models open, as F8 |
+| F13 | 025 | A pre-rotation digest over the whole next leaf cannot be minted: the regress has no base. Neither the model nor the review caught it; building the circuit did. | digest commits to the next secret's image; `next_secret_fixed` |
 
 ### Where formal builds would help next
 
@@ -123,7 +150,8 @@ These are candidates, ordered by how much a model would settle. Each names the p
 
 **In this specification and its evidence**
 
-- **Closing F1–F5 and F8 in the models.** The claims are now accurate. Strengthening the models restores the original claims with proofs behind them.
+- **Closing F1–F5, F8 and F12 in the models.** The claims are now accurate. Strengthening the models restores the original claims with proofs behind them.
+- **Stating the need as a theorem.** F10 and F11 were relations that were sound and did not do what their record's need said. A model can carry the need as well: for record 025, that a rotation exists for a member holding the rotation material and no current secret, and that no rotation moves a leaf out from under a revoked handle. The second is now proved; the first is witnessed by one example and not yet stated in general.
 - **Circuit correspondence (G8).** Under-constrained signals live in the Circom circuits, not in the abstract relations. Two routes are open. One is a constraint-level checker on the R1CS, proving each output signal uniquely determined by the inputs. The other is a Lean model of the circuit's constraints, proved equivalent to the record's relation. Start with records 001 and 002, which every composed record reuses.
 - **Runtime state machines.** Spent sets, challenge minting and batch admission are modelled as sequential lists. Implementations need durable, concurrent, atomic behaviour: two verifiers racing on one nullifier, a crash between check and record, a root rotating mid-batch. A model with interleavings, checked against runtime logs, covers what fixtures cannot.
 - **Models as test oracles.** The gadget definitions are executable. Running the runtimes' fixtures through them in differential tests links model and implementation without a full equivalence proof.
